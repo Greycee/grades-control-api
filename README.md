@@ -13,6 +13,8 @@ const gradesRouter = require('./routes/grades.js')
 app.use('/grades', gradesRouter)
 ```
 
+Start by installing node modules: `npm i` and by running `nodemon`
+
 ## URL: http://localhost:3000
 
 ## POST:
@@ -43,13 +45,17 @@ Use the GET `/grades/order-grades/:subject/:type` to check the grades in a speci
 
 A propriedade `nextId` armazena sempre o próximo id que será utilizado na criação de uma nova grade. O arquivo `grades.json` possui um array com várias grades, cada uma sendo representada por um objeto com os campos **id, student, subject, type, value e timestamp**.
 
-## utilização do Router do express
-O arquivo `grades.js` foi criado dentro de `routes` informando cada métodod e endpoint e foi exportado em `index.js`:
+## Utilização do Router do express
+O arquivo `grades.js` foi criado dentro de `routes` informando cada método de endpoint e foi exportado em `index.js`:
 
 ```
 const gradesRouter = require('./routes/grades.js')
 app.use('/grades', gradesRouter)
 ```
+
+comece instalando node modules: `npm i` e inicializando a aplicação com `nodemon`
+
+## URL: http://localhost:3000
 
 ## POST:
 Use o método POST no endpoint `/grades` para criar uma grade. Este endpoint recebe como parâmetros os campos **student, subject, type** e **value**. Essa grade é salva no arquivo `grades.json`, e tem um id único associado. A API garante o incremento automático desse identificador, de forma que ele não se repita entre os registros. A cada novo registro, o campo `nextId` é incrementado e salvo no próprio arquivo, de forma que na próxima inserção ele possa ser utilizado.
