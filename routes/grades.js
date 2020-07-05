@@ -116,9 +116,7 @@ router.get('/get-grade/:student/:subject', (req, res) => {
       const getSumGrades = getStudentGrade.reduce((accumulator, current) => {
         return accumulator + current.value
       }, 0)
-      res.json(
-        `The sum of grades for this student in this subject is: ${getSumGrades}`,
-      )
+      res.json({ sum: getSumGrades })
     } catch (err) {
       res.status(400).send({ error: err.message })
     }
@@ -142,7 +140,7 @@ router.get('/get-average/:subject/:type', (req, res) => {
       }, 0)
 
       const average = getSumGrades / getSubjectAndType.length
-      res.json(`The average grade for this subject and type is: ${average}`)
+      res.json({ average })
     } catch (err) {
       res.status(400).send({ error: err.message })
     }

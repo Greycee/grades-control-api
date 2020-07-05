@@ -34,7 +34,7 @@ Use the GET `/grades/get-grade/:student/:subject` endpoint to check the final gr
 Use the GET `/grades/get-average/:subject/:type` to check the grade average on a certain subject and type. The endpoint receives **subject** and **type** as a parameter and returns the average.
 
 ## GET: 
-Use the GET `/grades/get-best-grades/:subject/:type` to check the grades in a specific subject and type in a descending order.This endpoint receives as a parameter a **subject** and a **type**.
+Use the GET `/grades/order-grades/:subject/:type` to check the grades in a specific subject and type in a descending order.This endpoint receives as a parameter a **subject** and a **type**.
 
 
 ----------------------
