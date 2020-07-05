@@ -1,5 +1,5 @@
 {
-  "name": "@door2door/grades-control-api",
+  "name": "grades-control-api",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
